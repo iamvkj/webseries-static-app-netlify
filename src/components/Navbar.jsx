@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+    const { searchQuery, handleSearch } = props;
 
     return (
         <>
@@ -17,7 +19,7 @@ const Navbar = () => {
                             <li className="nav-item"><Link className="nav-link" to="/hollywood">Hollywood</Link></li>
                         </ul>
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" disabled />
+                            <input className="form-control me-2" type="text" name="search" placeholder="Search" autoComplete="off" value={searchQuery} onChange={handleSearch} />
                             <button className="btn btn-outline-success" type="submit" disabled>Search</button>
                         </form>
                     </div>

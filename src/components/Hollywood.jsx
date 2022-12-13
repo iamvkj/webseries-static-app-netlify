@@ -1,11 +1,14 @@
 import React from "react";
 import HollywoodCard from "./HollywoodCard";
 import HollywoodData from "./HollywoodData";
+import Navbar from "./Navbar";
 
 const Hollywood = () => {
 
     return (
         <>
+            <Navbar />
+
             <div className="container">
                 <div className="row">
                     {
